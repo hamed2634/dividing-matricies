@@ -10,26 +10,29 @@ namespace DIVIDING_MATRICIES_V2._0
     {
         static void Main(string[] args)
         {
-                //reading sizes
+                //reading sizes such that if array1 m*n then array2 must be n*n, else reread input.
                 int rows1 = 0, rows2 = 1, cols1 = 0, cols2 = 0;
                 bool valid = true;
+                Console.WriteLine("This Program Divides Array(1) By Array(B).\n");
                 while (cols2 != rows2 || cols1 != rows2)
                 {
                     if (!valid) Console.WriteLine("INVALID INPUT TRY AGAIN.\n");
-                    Console.Write("Enter the rows of the fist array: ");
+                    Console.WriteLine("Enter Array(1) Size:-");
+                    Console.Write("Enter The Rows: ");
                     rows1 = int.Parse(Console.ReadLine());
-                    Console.Write("Enter the columns of the fist array: ");
+                    Console.Write("Enter The Columns: ");
                     cols1 = int.Parse(Console.ReadLine());
-                    Console.Write("Enter the rows of the second array: ");
+                    Console.WriteLine("\nEnter Array(2) Size:-");
+                    Console.Write("Enter The Rows: ");
                     rows2 = int.Parse(Console.ReadLine());
-                    Console.Write("Enter the columns of the second array: ");
+                    Console.Write("Enter The Columns: ");
                     cols2 = int.Parse(Console.ReadLine());
                     valid = false;
                 }
 
                 //reading array1
                 Console.WriteLine();
-                Console.WriteLine("---------------< Enter array(1) >---------------");
+                Console.WriteLine("---------------( Enter array(1) )---------------");
                 int[,] arr1 = new int[rows1, cols1];
                 for (int i = 0; i < rows1; i++)
                 {
@@ -41,7 +44,7 @@ namespace DIVIDING_MATRICIES_V2._0
                 }
                 Console.WriteLine();
                 //reading array2
-                Console.WriteLine("---------------< Enter array(2) >---------------");
+                Console.WriteLine("---------------( Enter array(2) )---------------");
                 double[,] arr2 = new double[rows2, cols2];
                 for (int i = 0; i < rows2; i++)
                 {
@@ -132,7 +135,7 @@ namespace DIVIDING_MATRICIES_V2._0
 
                 //displaying res:
                 Console.WriteLine();
-                Console.WriteLine("----------------< array(1) / array(2) >----------------");
+                Console.WriteLine("----------------( array(1) / array(2) )----------------");
                 for (int i = 0; i < rows1; i++)
                 {
                     for (int j = 0; j < cols2; j++)
