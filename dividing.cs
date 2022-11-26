@@ -13,7 +13,7 @@ namespace DIVIDING_MATRICIES_V2._0
                 //reading sizes such that if array1 m*n then array2 must be n*n, else reread input.
                 int rows1 = 0, rows2 = 1, cols1 = 0, cols2 = 0;
                 bool valid = true;
-                Console.WriteLine("This Program Divides Array(1) By Array(B).\n");
+                Console.WriteLine("This Program Divides Array(1) By Array(2).\n");
                 while (cols2 != rows2 || cols1 != rows2)
                 {
                     if (!valid) Console.WriteLine("INVALID INPUT TRY AGAIN.\n");
